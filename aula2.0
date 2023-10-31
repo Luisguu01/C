@@ -1,0 +1,29 @@
+#include <stdio.h>
+int perfeito (int num);
+int main(){
+    int num, resp;
+    printf("Informe um numero: ");
+    scanf("%d", &num);
+    resp = perfeito(num);
+    if(resp == 0){
+        printf("O numero e perfeito\n");
+    }
+    else{
+        printf("o numero nao e perfeito\n");
+    }
+    return 0;
+}
+int perfeito (int num){
+    int soma = 0, i;
+    for(i = 1; i < num; i++){
+        if(num % i == 0){
+            soma += i;
+        }
+    }
+    if(soma == num){
+        return 0;
+    }
+    else{
+        return 1;
+    }
+}
