@@ -1,0 +1,65 @@
+#include <stdio.h>
+int soma (int n1, int n2);
+int subtracao (int n1, int n2);
+int divisao (int n1, int n2);
+int multiplicacao (int n1, int n2);
+
+int main(){
+    int num1, num2, opcao;
+printf("*************************************\n");
+    printf("1- Soma\n");
+    printf("2- Subtracao\n");
+    printf("3- Divisao\n");
+    printf("4- Multiplicacao\n");
+    printf("5- Sair do programa\n");
+    printf("*************************************");
+    scanf("%d", &opcao);
+    while(opcao != 5){
+        printf("Informe dois numeros: ");
+        scanf("%d %d", &num1, &num2);
+        switch(opcao){
+            case 1:{
+                int resp = soma(num1, num2);
+                printf("soma: %d\n", resp);
+                break;
+            }
+            case 2:{
+                int resp = subtracao(num1, num2);
+                printf("subtracao: %d\n", resp);
+                break;
+            }
+            case 3:{
+                int resp = divisao(num1, num2);
+                printf("divisao: %d\n", resp);
+                break;
+            }
+            case 4:{
+                int resp = multiplicacao(num1, num2);
+                printf("multiplicacao: %d\n", resp);
+            }
+            case 5:{
+                break;
+            }
+            default:{
+                printf("Opcao invalida!\n");
+            }
+        }
+    }
+    return 0;}
+int soma (int n1, int n2){
+    return n1 + n2;
+}
+int subtracao(int n1, int n2){
+    return n1 - n2;
+}
+int divisao (int n1, int n2){
+    if(n2 == 0){
+        return 0;
+    }
+    else{
+        return n1/n2;
+    }
+}
+int multiplicacao (int n1, int n2){
+    return n1 * n2;
+}
