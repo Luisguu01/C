@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void produtoEscalar(int a[10], int b[10], int c [10]);
+
+int main(){
+    int va[10], vb[10], vc[10], i;
+    printf("Preenchendo o vetor A:\n");
+    for(i = 0; i < 10; i++){
+    printf("Informe o valor da posicao [%d]: ", i);
+    scanf("%d", &va[i]);
+    }
+        printf("Preenchendo o vetor B:\n");
+    for(i = 0; i < 10; i++){
+    printf("Informe o valor da posicao [%d]:\n", i);
+    scanf("%d", &vb[i]);
+    }    
+produtoEscalar(va, vb, vc);
+printf("Vetor C");
+for(i = 0; i < 10; i++){
+    printf("%d\t", vc[i]);
+}
+return 0;
+
+}
+
+void produtoEscalar(int a[10], int b[10], int c [10]){
+    int i;
+    for(i = 0; i < 10; i++){
+        c[i] = a[i] * b[i];
+    }
+}
