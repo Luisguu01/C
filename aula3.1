@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int busca(int vetor[], int tam, int num);
+
+int main(){
+    int v1[10], v2[5], i, num, qnt;
+    printf("Preenchendo o primeiro vetor:\n");
+    for(i = 0; i < 10; i++){
+        printf("Informe o valor da posicao [%d]:", i);
+        scanf("%d", &v1[i]);
+    }
+    printf("Informe o numero a ser buscado:\n");
+    scanf("%d", &num);
+    qnt = busca(v1, 10, num);
+    printf("O Numero %d aparece %d vezes.\n", num, qnt);
+    return 0;
+}
+int busca(int vetor[], int tam, int num){
+    int i, qnt=0;
+    for(i=0; i<tam; i++){
+        if(vetor[i] == tam){
+            qnt++;
+        }
+    }
+    return qnt;
+}
